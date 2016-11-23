@@ -4,8 +4,8 @@ This repository was created to create a simple React tabs component from scracth
 We will first set up our workspace, configure some dev-tools and plumbing and finally get down to business.
 
 This repository will use the next tools:
-- [Node.js ^7.1.0](https://nodejs.org) - Runtime environment.
-- [TypeScript ^2.1.1](https://www.typescriptlang.org) - Client side language that compiles to JavaScript.
+- [Node.js](https://nodejs.org) - Runtime environment.
+- [TypeScript](https://www.typescriptlang.org) - Client side language that compiles to JavaScript.
 - [React](https://facebook.github.io/react) - JavaScript library for building UIs
 - [Bootstrap](http://getbootstrap.com) - HTML/JS/CSS framework for developing responsive, mobile first projects on the web.
 - [SASS](http://sass-lang.com) - Scripting language that extends CSS.
