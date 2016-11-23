@@ -16,8 +16,8 @@ The first thing we need to do for creating our React tabs component is setting u
 - [Webpack](#webpack)
 	- [Install Webpack and plugins](#install-webpack-and-plugins)
 	- [Configure Webpack](#configure-ebpack)
- - [Testing](#testing)
- -
+- [Testing](#testing)
+ 	- [Install testing suite](#install-testing-suite)
 
 ### Install the basic tools
 
@@ -290,6 +290,6 @@ Finally we need to update our `package.json` to add an entry point to start our 
 
 ### Testing
 
-#### Install testing suite.
+#### Install testing suite
 
 TODO
