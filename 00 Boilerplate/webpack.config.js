@@ -12,7 +12,7 @@ module.exports = {
     extensions: ['.js', '.ts', '.tsx'],
   },
   entry: [
-    './main.ts',
+    './main.tsx',
     './styles.scss',
     '../node_modules/bootstrap/dist/css/bootstrap.css'
   ],
