@@ -77,7 +77,7 @@ We will define two main entry points for our application. We will first create a
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>React Tabs</title>
+    <title>Hello</title>
   </head>
   <body>
     <h1>Sample using React, Bootstrap, SASS and TypeScript</h1>
@@ -205,7 +205,7 @@ module.exports = {
     extensions: ['.js', '.ts', '.tsx'],
   },
   entry: [
-    './main.tsx',
+    './main.ts',
     './styles.scss',
     '../node_modules/bootstrap/dist/css/bootstrap.css'
   ],
