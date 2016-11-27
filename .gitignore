@@ -44,3 +44,6 @@ dist/
 
 # Yarn lock file
 yarn.lock
+
+# Vscode stuff
+.vscode/

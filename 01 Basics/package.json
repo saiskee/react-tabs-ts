@@ -1,0 +1,42 @@
+{
+  "name": "react-tabs-ts",
+  "version": "1.0.0",
+  "description": "Sample repository create a simple tabs component using React TypeScript and Bootstrap",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "bootstrap"
+  ],
+  "author": "Santiago Camargo Rodríguez <santi.camargo.rodriguez@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crsanti/react-tabs-ts"
+  },
+  "devDependencies": {
+    "@types/react": "^0.14.50",
+    "@types/react-dom": "^0.14.19",
+    "clean-webpack-plugin": "^0.1.14",
+    "css-loader": "^0.26.0",
+    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.1",
+    "node-sass": "^3.13.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^1.2.2",
+    "typescript": "^2.2.0-dev.20161122",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.1.0-beta.14",
+    "webpack-dev-server": "^2.1.0-beta.10"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
+}
