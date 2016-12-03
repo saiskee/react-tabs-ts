@@ -10,8 +10,9 @@ interface Props {
 
 interface State {
   selectedTab: string;
-  animate: boolean;
+  animate?: boolean;
 }
+
 
 export class TabsComponent extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -19,7 +20,7 @@ export class TabsComponent extends React.Component<Props, State> {
 
     this.state = {
       selectedTab: props.selectedTab || null,
-      animate: props.animate,
+      animate: !!props.animate,
     };
 
     this.onSelect = this.onSelect.bind(this);
@@ -42,7 +43,7 @@ export class TabsComponent extends React.Component<Props, State> {
       const selected = name === this.state.selectedTab;
       navigationItems.push(<TabNavItem onClick={this.onSelect} key={index} name={name} selected={selected} />);
       tabPaneItems.push(
-        <TabPane key={index} animate={this.props.animate} name={name} selected={selected}>
+        <TabPane key={index} animate={this.state.animate} name={name} selected={selected}>
           {child.props.children}
         </TabPane>
       );
