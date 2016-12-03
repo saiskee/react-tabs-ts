@@ -11,8 +11,9 @@ interface Props {
 
 interface State {
   selectedTab: string;
-  animate: boolean;
+  animate?: boolean;
 }
+
 
 export class TabsComponent extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -20,7 +21,7 @@ export class TabsComponent extends React.Component<Props, State> {
 
     this.state = {
       selectedTab: props.selectedTab || null,
-      animate: props.animate,
+      animate: !!props.animate,
     };
 
     this.selectTab = this.selectTab.bind(this);

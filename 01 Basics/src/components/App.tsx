@@ -6,7 +6,6 @@ import {
 
 export const App: React.StatelessComponent<{}> = () => (
   <div className="container">
-    <h1>Sample using React, Bootstrap and TypeScript</h1>
     <TabsComponent selectedTab="Home" animate>
       <TabPane name="Home">
         <h1 className="text-center">Home Pane</h1>
