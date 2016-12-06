@@ -26,10 +26,10 @@ describe('<TabsComponent /> tests', () => {
   it('should render as many TabNavItems as TabPanes inside the navigation bar', () => {
     const wrapper = shallow(
       <TabsComponent>
-        <TabPane>
+        <TabPane name="foo">
           <span>Foo</span>
         </TabPane>
-        <TabPane>
+        <TabPane name="bar">
           <span>Bar</span>
         </TabPane>
       </TabsComponent>
@@ -44,10 +44,10 @@ describe('<TabsComponent /> tests', () => {
   it('should render as many TabPanes as TabPanes childs it has', () => {
     const wrapper = shallow(
       <TabsComponent>
-        <TabPane>
+        <TabPane name="foo">
           <span>Foo</span>
         </TabPane>
-        <TabPane>
+        <TabPane name="bar">
           <span>Bar</span>
         </TabPane>
       </TabsComponent>

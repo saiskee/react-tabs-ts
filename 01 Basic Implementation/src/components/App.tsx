@@ -16,7 +16,7 @@ export const App: React.StatelessComponent<{}> = () => (
       <TabPane name="Messages">
         <h1 className="text-center">Messages Pane</h1>
       </TabPane>
-      <TabPane name="Settings">
+      <TabPane name="Settings" disabled>
         <h1 className="text-center">Settings Pane</h1>
       </TabPane>
       <TabPane name="About">
