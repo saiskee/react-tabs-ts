@@ -10,6 +10,7 @@ describe('<TabNavItem tests', () => {
       selected: false,
       name: 'foo',
       onClick: () => { },
+      disabled: false,
     };
     const wrapper = shallow(<TabNavItem {...props} />);
 
@@ -24,6 +25,7 @@ describe('<TabNavItem tests', () => {
       selected: false,
       name: 'foo',
       onClick: () => { },
+      disabled: false,
     };
     const wrapper = shallow(<TabNavItem {...props} />);
 
@@ -41,6 +43,7 @@ describe('<TabNavItem tests', () => {
       selected: false,
       name: 'Home',
       onClick: () => { },
+      disabled: false,
     };
     const wrapper = shallow(<TabNavItem {...props} />);
 
@@ -52,6 +55,7 @@ describe('<TabNavItem tests', () => {
       selected: true,
       name: 'foo',
       onClick: () => { },
+      disabled: false,
     };
 
     const wrapper = shallow(<TabNavItem {...props} />);
@@ -64,7 +68,8 @@ describe('<TabNavItem tests', () => {
     const props = {
       selected: false,
       name: 'foo',
-      onClick: onClickHandler
+      onClick: onClickHandler,
+      disabled: false,
     };
     const wrapper = shallow(<TabNavItem {...props} />);
     const result = wrapper.find('li').simulate('click');

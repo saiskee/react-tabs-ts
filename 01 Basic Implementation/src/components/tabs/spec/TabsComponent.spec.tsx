@@ -26,10 +26,10 @@ describe('<TabsComponent /> tests', () => {
   it('should render as many TabNavItems as TabPanes inside the navigation bar', () => {
     const wrapper = shallow(
       <TabsComponent>
-        <TabPane>
+        <TabPane name="foo">
           <span>Foo</span>
         </TabPane>
-        <TabPane>
+        <TabPane name="bar">
           <span>Bar</span>
         </TabPane>
       </TabsComponent>
@@ -44,10 +44,10 @@ describe('<TabsComponent /> tests', () => {
   it('should render as many TabPanes as TabPanes childs it has', () => {
     const wrapper = shallow(
       <TabsComponent>
-        <TabPane>
+        <TabPane name="foo">
           <span>Foo</span>
         </TabPane>
-        <TabPane>
+        <TabPane name="bar">
           <span>Bar</span>
         </TabPane>
       </TabsComponent>
@@ -127,7 +127,7 @@ describe('<TabsComponent /> tests', () => {
     expect(paneContainer.childAt(1).props().animate).to.be.true;
   });
 
-  it('should pass animate = "false" by default', () => {
+  it('should pass animate = "false" to its TabPane children by default', () => {
     const wrapper = shallow(
       <TabsComponent>
         <TabPane name="foo">
@@ -140,16 +140,18 @@ describe('<TabsComponent /> tests', () => {
     expect(paneContainer.childAt(0).prop('animate')).to.be.false;
   });
 
-  it('should change selectedTab when onSelect is triggered', () => {
+  it('should change selectedTab when selectTab is called', () => {
+    // Arrange
     const wrapper = shallow(<TabsComponent />);
-
-    wrapper.instance()['onSelect']('foo');
-
     const expectedState = {
       selectedTab: 'foo',
       animate: false,
     };
 
+    // Act
+    wrapper.instance()['selectTab']('foo');
+
+    // Assert
     expect(wrapper.instance().state).to.eqls(expectedState);
   });
 
