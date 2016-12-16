@@ -27,6 +27,10 @@ module.exports = function (config) {
       }
     },
 
+    mochaReporter: {
+      output: 'autowatch',
+    },
+
     singleRun: false,
 
     files: [

@@ -23,7 +23,6 @@ export class TabPane extends React.Component<Props, {}> {
   };
 
   componentDidMount() {
-    console.log('Child mounted!');
     if (this.props.selected) {
       this.parentDiv.classList.add(...['active', 'in']);
     }

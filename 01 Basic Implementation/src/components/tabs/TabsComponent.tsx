@@ -28,10 +28,17 @@ export class TabsComponent extends React.Component<Props, State> {
   }
 
   static propTypes = {
-    children: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        type: React.PropTypes.oneOf([TabPane]),
-      })
+    children: React.PropTypes.oneOfType(
+      [
+        React.PropTypes.shape({
+          type: React.PropTypes.oneOf([TabPane]),
+        }),
+        React.PropTypes.arrayOf(
+          React.PropTypes.shape({
+            type: React.PropTypes.oneOf([TabPane]),
+          })
+        )
+      ]
     ),
     selectedTab: React.PropTypes.string,
     animate: React.PropTypes.bool,
@@ -52,10 +59,6 @@ export class TabsComponent extends React.Component<Props, State> {
   private getChildren() {
     let navigationItems = [];
     let tabPaneItems = [];
-
-    this.props.children.forEach(child => {
-      console.log(child.props.props);
-    });
 
     // TODO: need more research about child typing...
     React.Children.forEach(this.props.children, (child: React.ReactElement<any>, index) => {
@@ -82,7 +85,7 @@ export class TabsComponent extends React.Component<Props, State> {
 
       tabPaneItems = [
         ...tabPaneItems,
-        <TabPane key={index} animate={this.props.animate} name={name} selected={selected}>
+        <TabPane key={index} animate={!!this.props.animate} name={name} selected={selected}>
           {child.props.children}
         </TabPane>
       ];

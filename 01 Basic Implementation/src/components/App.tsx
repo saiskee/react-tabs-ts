@@ -4,9 +4,13 @@ import {
   TabPane,
 } from './tabs';
 
+const callback = (...args) => {
+  console.log('onSelect callback triggered', ...args);
+};
+
 export const App: React.StatelessComponent<{}> = () => (
   <div className="container">
-    <TabsComponent selectedTab="Home" animate>
+    <TabsComponent selectedTab="Home" onSelect={callback}>
       <TabPane name="Home">
         <h1 className="text-center">Home Pane</h1>
       </TabPane>
@@ -16,7 +20,7 @@ export const App: React.StatelessComponent<{}> = () => (
       <TabPane name="Messages">
         <h1 className="text-center">Messages Pane</h1>
       </TabPane>
-      <TabPane name="Settings" disabled>
+      <TabPane name="Settings">
         <h1 className="text-center">Settings Pane</h1>
       </TabPane>
       <TabPane name="About">
